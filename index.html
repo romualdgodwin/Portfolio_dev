@@ -618,13 +618,13 @@
                 <!--Contact form-->
                 <div class="contact-form">
                     <div class="form-header">Formulaire de Contact</div>
-                    <form id="myForm" action="#">
+                    <form id="myForm" action="https://formspree.io/f/xjvnkoqe" method="post">
                         <div class="input-line">
-                            <input id="name" type="text" placeholder="Nom" class="input-name">
-                            <input id="email" type="email" placeholder="Email"  class="input-name">
+                            <input name="name" id="name" type="text" placeholder="Nom" class="input-name">
+                            <input name="email" id="email" type="email" placeholder="Email"  class="input-name">
                         </div>
-                        <input id="subject" type="text" placeholder="Objet" class="input-subject">
-                        <textarea id ="body" class="input-textarea" placeholder="Message"></textarea>
+                        <input name="subject" id="subject" type="text" placeholder="Objet" class="input-subject">
+                        <textarea name="body" id ="body" class="input-textarea" placeholder="Message"></textarea>
                         <button type="submit" id ="submit" value="send">Envoyer</button>
                     </form>
                 </div>
