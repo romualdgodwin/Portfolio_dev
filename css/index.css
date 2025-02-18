@@ -807,7 +807,7 @@ body{
     margin-top: 100px;
     z-index: 3;
     opacity: 1;
-    background: #080808;
+    background: #272424;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 15px;
@@ -2040,7 +2040,7 @@ for tabs and large phones
         margin-left: 0px;
         margin-top: 0px;
         z-index: 1;
-        background: #080808;
+        background: #000000;
         padding-top: 15px;
         padding-bottom: 15px;
     }

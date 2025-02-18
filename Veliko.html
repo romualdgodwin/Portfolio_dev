@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veliko</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #2506ad;
+            margin-bottom: 1rem;
+        }
+
+        .category p {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            color: #555;
+            margin-top: 1rem;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeIn 1s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Flex container for blocks */
+        .flex-container {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+        }
+
+        .block {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .block h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2506ad;
+            margin-bottom: 1rem;
+        }
+
+        .block p {
+            font-size: 1.4rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .block {
+                flex: unset; /* Blocks take full width on smaller screens */
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .category p {
+                font-size: 1.4rem;
+            }
+        }
+
+        .block ul {
+            list-style-type: none; /* Remove default bullets */
+            padding: 0; /* Remove default padding */
+            margin: 1rem 0; /* Add spacing above and below the list */
+            text-align: left; /* Explicitly align text to the left */
+        }
+
+        .block ul li {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #555;
+            padding-left: 1.5rem;
+            position: relative; /* For custom bullet positioning */
+        }
+
+        .block ul li:before {
+            content: "•"; /* Custom bullet */
+            color: #2506ad; /* Bullet color */
+            font-size: 1.6rem;
+            position: absolute;
+            left: 0; /* Align bullet */
+            top: 0.2rem; /* Adjust bullet vertical position */
+        }
+
+        .block ul li strong {
+            color: #333; /* Highlighted text for labels */
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <!-- First Section -->
+        <div class="section">
+            <h2 class="section-title" style="text-align: center;">Projet Veliko</h2>
+
+            <!-- First Flex Block -->
+            <div class="flex-container">
+                <div class="block">
+                    <h3>Objectif du projet</h3>
+                    <p>Développer une carte interactive répertoriant toutes les stations Vélib’ d’Île-de-France. Les utilisateurs peuvent consulter la disponibilité des vélos classiques et électriques, ajouter leurs stations préférées à une liste de favoris, et gérer leur compte via un espace client. Un espace administrateur permet la gestion centralisée des stations et des données.</p>
+                </div>
+                <div class="block">
+                    <h3>Informations utiles</h3>
+                    <ul>
+                        <li><strong>Langages utilisés:</strong> TWIG, PHP, JAVASCRIPT</li>
+                        <li><strong>Frameworks utilisés:</strong> Symfony</li>
+                        <li><strong>Base de données:</strong> MySQL</li>
+                        <li><strong>API :</strong> API Vélib’, OpenStreetMap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Main Image -->
+        <div class="image-container">
+            <img src="img/VelikoHomePage.png" alt="Veliko Home Page" />
+        </div>
+
+        <!-- Second Section with Title -->
+        <div class="section">
+            <h2 class="section-title" style="text-align: center;">Défis rencontrés</h2>
+            <div class="flex-container">
+                <div class="block">
+                    <h3>Développement de l’interface</h3>
+                    <p>Il était essentiel de maîtriser la structure du framework TWIG et de faire des choix stratégiques pour les palettes de couleurs afin de garantir une expérience visuelle cohérente et attrayante. L’intégration d’animations modernes et la conception d’une interface intuitive ont permis de créer un site à la fois esthétique et fonctionnel, répondant aux standards actuels du design web.</p>
+                </div>
+                <div class="block">
+                    <h3>Ajout de stations aux favoris</h3>
+                    <p>Cette fonctionnalité nécessitait une maîtrise approfondie de Symfony, ainsi que des ajustements dans la base de données pour intégrer les stations favoris. Il a été nécessaire de rédiger des requêtes SQL efficaces et de choisir les bonnes boucles pour récupérer les informations pertinentes à partir de l’API, assurant ainsi une gestion fluide et performante des données utilisateurs.</p>
+                </div>
+                <div class="block">
+                    <h3>Affichage des favoris</h3>
+                    <p>L’ajout de stations aux favoris depuis la carte et à partir d’une liste dédiée sur une page séparée a présenté un véritable défi. La difficulté résidait dans l’affichage correct des stations, ce qui a nécessité plusieurs heures de travail. Après une analyse approfondie, il est apparu que le problème venait de la formulation de la requête SQL, que j’ai finalement optimisée pour résoudre le dysfonctionnement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Images -->
+    <div class="image-container">
+        <img src="img/Prob1.png" alt="Problem 1" />
+    </div>
+
+    <div class="image-container">
+        <img src="img/Prob2.png" alt="Problem 2" />
+    </div>
+</div>
+
+</body>
+</html>
