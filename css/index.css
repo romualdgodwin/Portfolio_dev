@@ -1034,7 +1034,7 @@ button:hover .index{
   vertical-align: center;
   font-family: poppins;
   color: whitesmoke;
-  background-color: #050505;
+  background-color: #101010;
   transition: all .5s ease;
 }
 .blog-text h3{
@@ -1243,7 +1243,7 @@ form button:hover{
 }
 
 .footer{
-    background: #080808;
+    background: #101010;
     width: 100%;
     padding: 20px;
     color: whitesmoke;
